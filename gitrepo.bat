@@ -1,4 +1,6 @@
 @echo off
+rem WARNING: do not delete this comment below
+rem gitutils
 title gitclone
 
 if "%1"=="" (
