@@ -10,7 +10,7 @@ echo.
 echo.
 pause
 git add -A
-type /p "commit_message=your commit message: "
+set /p "commit_message=your commit message: "
 echo.
 git commit -m "%commit_message%"
 echo pushing all changes...
