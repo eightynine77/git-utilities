@@ -1,5 +1,6 @@
 @echo off
-title gitclone
+rem gitutils
+title gitrepo
 
 if "%1"=="" (
     echo No arguments provided.
