@@ -3,8 +3,6 @@ rem gitutils
 if "%~1"=="" (
     echo No arguments provided.
     echo.
-    echo this script is for commiting to a repot git repo.
-    echo.
 echo usage: gitcommit [your git commit message]
 echo.
 echo for example: gitcommit fixed the UI
@@ -12,15 +10,15 @@ echo for example: gitcommit fixed the UI
 )
 
 if exist ".git\" (
-set "input=%*"
-set "msg=%input:"=%"
 git add -A
-git commit -m "%msg%"
+git commit -m "%*"
+echo.
+git push origin main
+echo.
 echo.
 echo done!
 exit /b
 ) else (
 echo you are not in a github repo...
 )
-
 :end
