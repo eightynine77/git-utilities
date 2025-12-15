@@ -45,10 +45,10 @@ goto :loop
 echo.
 echo cloning repository: %1/%2
 echo.
-git clone git@:%1:%1/%2
+git clone git@%1:%1/%2
 echo.
 echo.
-gecho "<green>cloning complete"
+echo cloning complete
 echo.
 goto :end
 
