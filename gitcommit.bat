@@ -8,6 +8,9 @@ if exist ".git\" (
     ) else if "%~1"=="-p" (
         git push origin main
         goto :end
+    ) else (
+        echo unkown argument %1
+        goto :end
     )
 )
 
@@ -45,3 +48,4 @@ echo you are not in a github repo...
 )
 
 :end
+
