@@ -9,11 +9,9 @@ if not exist ".git\" (
 set "arg=%~1"
 
 if "%arg%"=="--push" (
-call :helppopup
     git push origin main
     goto :end
 ) else if "%arg%"=="-p" (
-call :helppopup
     git push origin main
     goto :end
 ) else if "%arg%"=="--help" (
@@ -26,6 +24,8 @@ goto :end
 
 if "%arg:~0,1%"=="-" (
     echo Unknown argument: %arg%
+    echo.
+    echo.
     call :helpmsg
     goto :end
 )
@@ -43,8 +43,6 @@ echo ==================================
 goto end
 
 :helpmsg
-echo.
-echo.
 echo usage
 echo ====================
 echo if you want to make a commit with a commit message, use: 
@@ -63,4 +61,3 @@ echo gitcommit -p
 echo type --help or -h to see the list of commands for this script
 
 :end
-
