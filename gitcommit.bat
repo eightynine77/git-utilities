@@ -43,6 +43,7 @@ echo ==================================
 goto end
 
 :helpmsg
+echo.
 echo usage
 echo ====================
 echo if you want to make a commit with a commit message, use: 
@@ -61,3 +62,4 @@ echo gitcommit -p
 echo type --help or -h to see the list of commands for this script
 
 :end
+
