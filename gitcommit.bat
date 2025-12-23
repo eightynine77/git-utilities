@@ -11,8 +11,14 @@ set "arg=%~1"
 if "%arg%"=="--push" (
     git push origin main
     goto :end
-) else if "%arg%"=="-p" (
+) else if "%arg%"=="-ph" (
     git push origin main
+    goto :end
+) else if "%arg%"=="--pull" (
+    git pull origin main
+    goto :end
+) else if "%arg%"=="-pl" (
+    git pull origin main
     goto :end
 ) else if "%arg%"=="--help" (
 call :helpmsg
@@ -51,12 +57,17 @@ echo gitcommit [your git commit message]
 echo.
 echo for example: gitcommit fixed the UI
 echo.
-echo.
 echo if you want to only make a commit and nothing else, use:
-echo gitcommit [-p ^| --push]
+echo gitcommit [-ph ^| --push]
 echo.
 echo for example: gitcommit --push
-echo gitcommit -p
+echo gitcommit -ph
+echo.
+echo if you want to pull from remote, use:
+echo gitcommit [-pl ^| --pull]
+echo.
+echo for example: gitcommit --pull
+echo gitcommit -pl
 
 :helppopup
 echo type --help or -h to see the list of commands for this script
